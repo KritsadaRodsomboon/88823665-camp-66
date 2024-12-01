@@ -7,12 +7,110 @@
 </head>
 
 <body>
-    <h1>Heading 1</h1>
-    <h2>Heading 2</h2>
-    <h3>Heading 3</h3>
-    <h4>Heading 4</h4>
-    <h5>Heading 5</h5>
-    <h6>Heading 6</h6>
+    <h1>Workshop #HTML - FORM</h1>
+    <form>
+        <table>
+            <tr>
+                <td>
+                    <label for="Username">ชื่อ:</label>
+                </td>
+                <td>
+                    <input type="text" id="fname" name="fname"><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="Surname">สกุล:</label>
+                </td>
+                <td>
+                    <input type="text" id="skibidi" name="dopdop"><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="dop">วัน/เดือน/ปีเกิด:</label>
+                </td>
+                <td>
+                    <input type="date" id="dop" name="dop" lang="en-US">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="pod">อายุ:</label>
+                </td>
+                <td>
+                    <input type="text" id="dop" name="dop" lang="en-US">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="dop">เพศ:</label>
+                </td>
+                <td>
+                    <input type="radio" id="ผู้" name="ผม" value="ช">
+                    <label for="ช">ชาย</label>
+                    <input type="radio" id="เมีย" name="ผม" value="ญ">
+                    <label for="ญ">หญิง</label>
+            </tr>
+            <tr>
+                <td>
+                    <label for="dop">รูป:</label>
+                </td>
+                <td>
+                    <input type="file" id="myfile" name="myfile">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="dop">ที่อยู่</label>
+                </td>
+                <td>
+                    <textarea rows="6" cols="30"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="yes">สีที่ชอบ</label>
+                </td>
+                <td>
+                    <select id="colour" name="colour" size="1">
+                        <option value="สีแดง">สีแดง</option>
+                        <option value="สีเขียว">สีเขียว</option>
+                        <option value="สีเหลือง">สีเหลือง</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="yes">แนวเพลงที่ชอบ</label>
+                </td>
+                <td>
+                    <input type="radio" id="p" name="p" value="p">
+                    <label for="ก">Country and Folk</label>
+                    <input type="radio" id="p" name="p" value="p">
+                    <label for="ก">Phonk</label>
+                    <input type="radio" id="p" name="p" value="p">
+                    <label for="ก">อื่นๆ</label>
+                </td>
+            </tr>
+            <tr>
+                <td><br></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                    <label for="yes">ยินยอมให้เก็บข้อมูล</label><br><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="Reset"><br>
+                </td>
+                <td> <input type="button" value="Submit">
+                </td>
+            </tr>
+        </table>
+    </form>
 </body>
 
 </html>
