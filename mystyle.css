@@ -1,0 +1,95 @@
+h1{
+    text-align: center;
+    color: midnightblue;
+  }
+  hr {
+    border: none; /* ลบเส้นขอบเริ่มต้น */
+    border-top: 2px solid darkblue; /* เส้นหนา 2px สีเข้ม */
+    width: 90%; /* ความกว้างของเส้น */
+    margin: 20px auto; /* เพิ่มช่องว่างด้านบนและล่าง จัดให้อยู่กลาง */
+  }
+  /* จัด table */
+  table {
+    margin: 0 auto; /* จัดให้อยู่ตรงกลางจอ */
+    border-collapse: collapse; /* ลดช่องว่างระหว่างขอบ */
+    width: 100%; /* ปรับความกว้างเป็น 80% ของหน้าจอ */
+  }
+  
+  /* จัด td กับ th */
+  td {
+    padding: 10px; /* เพิ่มช่องว่างระหว่างข้อความ */
+    vertical-align: top; /* จัดข้อความให้ชิดบน */
+  }
+  
+  /* Label ชิดขวา */
+  td:first-child {
+    text-align: right;
+    font-weight: bold; /* ตัวอักษรหนา */
+    width: 30%; /* กำหนดความกว้างของคอลัมน์แรก */
+  }
+  
+  /* Input ช่องกรอก */
+  td:last-child {
+    text-align: left;
+    width: 70%; /* กำหนดความกว้างของคอลัมน์ที่สอง */
+  }
+  
+  /* ปุ่มแต่ง */
+  button {
+    padding: 10px 20px;
+    font-family: "Kanit", sans-serif;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    outline: none
+  }
+  
+  button[type="submit"] {
+    background-color: #28a745; /* สีเขียว */
+    color: white;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #218838; /* สีเขียวเข้มเมื่อ hover */
+  }
+  
+  button[type="reset"] {
+    background-color: #dc3545; /* สีแดง */
+    color: white;
+  }
+  
+  button[type="reset"]:hover {
+    background-color: #c82333; /* สีแดงเข้มเมื่อ hover */
+  }
+  /*ชี้เมาส์แล้วเปลี่ยนสี */
+  input:hover{/*input*/
+    background-color: darkgray;
+  }
+  textarea:hover{/*textarea ที่อยู่*/
+    background-color: darkgray;
+  }
+  /*กดแล้วเปลี่ยนสี */
+  input:focus {/*input*/
+    outline: none; /* ลบเส้นขอบเริ่มต้น */
+    border-color: #007bff; /* เปลี่ยนสีกรอบ */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* เพิ่มเงาสี */
+  }
+  textarea:focus {/*textarea*/
+    outline: none; /* ลบเส้นขอบเริ่มต้น */
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  select:focus {/*ที่กดเลือก*/
+    outline: none; /* ลบเส้นขอบเริ่มต้น */
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  body {
+    display: grid;
+    place-items: center; /* จัดทั้งแนวนอนและแนวตั้งให้อยู่ตรงกลาง */
+    height: 100vh; /* ใช้พื้นที่เต็มจอ */
+    margin: 0;
+    background-color:plum;
+  }
