@@ -20,7 +20,7 @@ Route::post('/mycontroller/{id?}',
 [Mycontroller::class,'myfunction']);
 
 Route ::get('/',function(){
-    return view('layouts.default');
+    return view('layout.default');
 });
 
 Route ::get('/home',function(){
@@ -30,8 +30,9 @@ Route ::get('/home',function(){
 Route ::get('/login',
 [LoginController::class,'index']);
 
-Route ::get('/register',
-[RegisterController::class,'index']);
+Route::get('/register',
+ [RegisterController::class, 'index']);
+
 
 Route ::post('/register',
 [RegisterController::class,'create']);
@@ -45,5 +46,5 @@ Route ::get('/user/{id}',
 Route ::put ('/user',
 [UserController::class,'saveEdit']);
 
-Route ::delete ('/user',
-[UserController::class,'delete']);
+Route::delete('/user/{id}',
+[UserController::class, 'delete'])->name('user.destroy');

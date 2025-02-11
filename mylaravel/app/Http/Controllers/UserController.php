@@ -13,7 +13,7 @@ class UserController extends Controller
     }
     function edit($id){
         $user = User::find($id);
-        return view('editUser',['user'=>$user]);
+        return view('user_edit',['user'=>$user]);
     }
     function saveEdit(Request $req){
         $user = User::find($req->id);
