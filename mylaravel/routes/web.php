@@ -1,50 +1,40 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Mycontroller;
+use App\Http\Controllers\MyController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
+use App\Http\Middleware\CheckLogin;
+use App\Http\Controllers\ProductController;
+Route::get("/product",[ProductController::class,"index"])->middleware([CheckLogin::class,]);
+Route::post("/product",[ProductController::class,"store"])->middleware([CheckLogin::class,]);
+Route::get('/mylaravel/{id?}',[Mycontroller::class,'myfunction']);
+Route::post('/mylaravel/{id?}',[Mycontroller::class,'myfunction']);
+
+Route::get( '/', [HomeController::class, 'index']);
+Route::post('/', [HomeController::class, 'index']);
+Route::get( '/home', [HomeController::class, 'index']);
+Route::post('/home', [HomeController::class, 'index'])->middleware([CheckLogin::class,]);
+
+Route::get('/user',  [UserController::class,'index']);
+
+Route::get('/register',  [RegisterController::class,'index']);
+Route::post('/register',  [RegisterController::class,'create']);
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/hello', function () {
-    return "<h1>Hello world</h1>";
-});
-Route::get("/mycontroller/{id?}",
-[Mycontroller::class,'myfunction']);
-
-Route::post('/mycontroller/{id?}',
-[Mycontroller::class,'myfunction']);
-
-Route ::get('/',function(){
-    return view('layout.default');
-});
-
-Route ::get('/home',function(){
-    return view('home');
-});
-
-Route ::get('/login',
-[LoginController::class,'index']);
-
-Route::get('/register',
- [RegisterController::class, 'index']);
+Route::get('/login',  [LoginController::class,'index']);
+Route::post('/login',  [LoginController::class,'login']);
 
 
-Route ::post('/register',
-[RegisterController::class,'create']);
 
-Route ::get('/user',
-[UserController::class,'index']);
+Route::get('/user/{id}',  [UserController::class,'edit']);
+Route::put('/user' ,[UserController::class, 'edit_user']);//update
+Route::delete('/user',[UserController::class, 'delete']);
 
-Route ::get('/user/{id}',
-[UserController::class,'edit']);
-
-Route ::put ('/user',
-[UserController::class,'saveEdit']);
-
-Route::delete('/user/{id}',
-[UserController::class, 'delete'])->name('user.destroy');
+// Route::get('/login',function(){
+//     session()->forget('user');
+//     session()->flush();
+// return redirect('/login');
+// });
